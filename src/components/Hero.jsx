@@ -1,3 +1,4 @@
+import CountUp from 'react-countup';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
@@ -13,33 +14,53 @@ const Hero = () => {
             </h2>
           </div>
 
-          <div className='flexColStart'>
-            We offer a variety of roof related services <br /> Forget all
-            difficulties in finding a residence for you
+          <div className='flexColStart hero-des'>
+            The one stop solution for all your roof related services <br />
+            We offer a variety of roofing amenities and solutions
+            <div className='typewriter'>
+              Our services include
+              <h3>
+                &nbsp; roof{' '}
+                <Typewriter
+                  words={[
+                    'repairs',
+                    'inspection',
+                    'cleaning',
+                    'coating',
+                    'tiling',
+                    'building',
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle='_'
+                  cursorBlinking={true}
+                  typeSpeed={100}
+                  deleteSpeed={70}
+                  delaySpeed={2500}
+                />
+              </h3>
+            </div>
           </div>
 
-          <div className='flexStart typewriter'>
-            We provide
-            <h3>
-              &nbsp; roof{' '}
-              <Typewriter
-                words={[
-                  'repairs',
-                  'inspections',
-                  'cleaning',
-                  'coating',
-                  'tiling',
-                  'installing',
-                ]}
-                loop={0}
-                cursor
-                cursorStyle='_'
-                cursorBlinking={true}
-                typeSpeed={100}
-                deleteSpeed={70}
-                delaySpeed={2500}
-              />
-            </h3>
+          <div className='flexCenter stats'>
+            <div className='flexColCenter stat'>
+              <span>
+                <CountUp start={2} end={10} duration={3} /> <span>+</span>
+              </span>
+              <span className='secondaryText'>Projects</span>
+            </div>
+            <div className='flexColCenter stat'>
+              <span>
+                <CountUp start={50} end={100} duration={4} /> <span>+</span>
+              </span>
+              <span className='secondaryText'>Happy customers</span>
+            </div>
+            <div className='flexColCenter stat'>
+              <span>
+                <CountUp start={500} end={1000} duration={4} /> <span>+</span>
+              </span>
+              <span className='secondaryText'>Hours of service</span>
+            </div>
           </div>
         </div>
 
