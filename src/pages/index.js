@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Services from '@/components/Services';
+import Value from '@/components/Value';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -20,8 +22,13 @@ export default function Home() {
       </Head>
       <main className={`${poppins.className}`}>
         <div className='app'>
-          <Header />
-          <Hero />
+          <div>
+            <div className='white-gradient' />
+            <Header />
+            <Hero />
+          </div>
+          <Services />
+          <Value />
         </div>
       </main>
     </>
