@@ -2,6 +2,10 @@ import {
   BsGraphUpArrow,
   BsHandThumbsUpFill,
   BsCurrencyDollar,
+  BsEnvelopeFill,
+  BsFillTelephoneFill,
+  BsMessenger,
+  BsGeoAltFill,
 } from 'react-icons/bs';
 
 // SERVICES SECTION
@@ -70,6 +74,37 @@ export const VALUES = [
     heading: 'Best price on the market',
     detail:
       'Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.',
+  },
+];
+
+// CONTACT SECTION
+
+export const CONTACTS1 = [
+  {
+    icon: <BsFillTelephoneFill size={20} />,
+    titleText: 'Phone',
+    description: '0452 352 546',
+    buttonText: 'Call or Text Us',
+  },
+  {
+    icon: <BsEnvelopeFill size={20} />,
+    titleText: 'Email',
+    description: 'roof@gmail.com',
+    buttonText: 'Email Us',
+  },
+];
+export const CONTACTS2 = [
+  {
+    icon: <BsMessenger size={20} />,
+    titleText: 'Messenger',
+    description: '021 123 145 14',
+    buttonText: 'Chat with Us',
+  },
+  {
+    icon: <BsGeoAltFill size={20} />,
+    titleText: 'Location',
+    description: 'Victoria, AUS',
+    buttonText: 'Google Maps',
   },
 ];
 
