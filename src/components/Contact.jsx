@@ -1,4 +1,4 @@
-import { CONTACTS } from '@/utils/constants';
+import { CONTACTS1, CONTACTS2 } from '@/utils/constants';
 import { useForm } from 'react-hook-form';
 import { BsCheckAll } from 'react-icons/bs';
 
@@ -42,7 +42,18 @@ const Contact = () => {
           </span>
           <div className='flexColStart contactModes'>
             <div className='flexStart row'>
-              {CONTACTS.map((contact, i) => (
+              {CONTACTS1.map((contact, i) => (
+                <ContactMode
+                  icon={contact.icon}
+                  titleText={contact.titleText}
+                  description={contact.description}
+                  buttonText={contact.buttonText}
+                  key={i}
+                />
+              ))}
+            </div>
+            <div className='flexStart row'>
+              {CONTACTS2.map((contact, i) => (
                 <ContactMode
                   icon={contact.icon}
                   titleText={contact.titleText}
@@ -54,16 +65,18 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className='c-right'>
+        <div className='c-right flexColStart'>
+          <span className='orangeText'>Get a Quote</span>
+          <span className='primaryText'>Enquiry Details</span>
           <form
-            className='flexColStart'
+            className='formDetails'
             target='_blank'
             onSubmit={onSubmit}
             method='POST'
             action='http://formsubmit.co/your@email.com'
           >
             <input
-              className='inputStyles md:h-16'
+              className='inputDetails'
               type='text'
               placeholder='Your name'
               {...register('name', {
@@ -72,7 +85,7 @@ const Contact = () => {
               })}
             />
             {errors.name && (
-              <p className='mt-1 text-primary-500'>
+              <p className='errorMessage'>
                 {errors.name.type === 'required' && 'Your name is required.'}
                 {errors.name.type === 'maxLength' &&
                   'Max length is 64 characters.'}
@@ -80,7 +93,7 @@ const Contact = () => {
             )}
 
             <input
-              className='inputStyles md:h-16'
+              className='inputDetails'
               type='email'
               placeholder='Your email'
               {...register('email', {
@@ -89,15 +102,15 @@ const Contact = () => {
               })}
             />
             {errors.email && (
-              <p className='mt-1 text-primary-500'>
+              <p className='errorMessage'>
                 {errors.email.type === 'required' && 'Your email is required.'}
                 {errors.email.type === 'pattern' && 'Invalid Email Address.'}
               </p>
             )}
 
             <textarea
-              className='inputStyles'
-              rows={10}
+              className='inputDetails'
+              rows={7}
               cols={50}
               placeholder='How can we help you?'
               {...register('message', {
@@ -106,7 +119,7 @@ const Contact = () => {
               })}
             />
             {errors.message && (
-              <p className='mt-1 text-primary-500'>
+              <p className='errorMessage'>
                 {errors.message.type === 'required' &&
                   'This field is required.'}
                 {errors.message.type === 'maxLength' &&
@@ -114,10 +127,7 @@ const Contact = () => {
               </p>
             )}
 
-            <button
-              type='submit'
-              className='mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white'
-            >
+            <button type='submit' className='button formButton'>
               SUBMIT
             </button>
           </form>
