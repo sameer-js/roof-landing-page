@@ -4,6 +4,9 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Value from '@/components/Value';
+import Contact from '@/components/Contact';
+import Gallery from '@/components/Gallery';
+import Footer from '@/components/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -29,6 +32,9 @@ export default function Home() {
           </div>
           <Services />
           <Value />
+          <Gallery />
+          <Contact />
+          <Footer />
         </div>
       </main>
     </>
