@@ -453,3 +453,159 @@ a {
 
     }
 }
+
+/* Contact */
+
+.c-wrapper {
+  margin-bottom: 1.4rem;
+}
+
+.c-container {
+  justify-content: space-between;
+  gap: 2rem;
+
+}
+.c-container > div {
+  flex: 1;
+}
+.c-right {
+  width: 100%;
+  gap: 0.5rem;
+}
+.c-left {
+  gap: 0.5rem;
+}
+
+.contactModes {
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.contactModes .row {
+  gap: 1.5rem;
+}
+.mode {
+  width: 16rem;
+  padding: 1rem;
+  border: 0.8px solid rgba(128, 128, 128, 0.143);
+  border-radius: 5px;
+  gap: 1rem;
+  transition: all 150ms ease-in;
+}
+.mode .button {
+  width: 100%;
+  background: var(--lightBlue);
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.mode > :nth-child(1) {
+  width: 100%;
+  gap: 1.6rem;
+}
+.mode .detail .primaryText {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mode:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.mode .button:hover {
+  color: white;
+  background: var(--blue-gradient);
+  scale: 0.9;
+}
+
+.formDetails {
+  width: 100%;
+}
+
+.inputDetails {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid #d5d5f8;
+  margin-top: 1rem;
+  padding: 0.8rem 0.8rem;
+}
+
+.inputDetails:focus {
+  background-color: #e8f0fe;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+  max-height: 250px;
+}
+
+.errorMessage {
+  font-size: 0.8rem;
+  color: #fd4d4d;
+}
+
+.formButton {
+  margin-top: 0.8rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .c-left > .secondaryText {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-container {
+    flex-direction: column;
+  }
+  .c-right {
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px)
+{
+    .contactModes{
+        width: 100%;
+    }
+    .row{
+        flex-direction: column;
+        width: 100%;
+    }
+    .mode{
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+.line {
+  margin: auto;
+  width: 75%;
+  border: 1px solid #eeeeff;
+}
+
+.f-container{
+  justify-content: space-between;
+}
+.f-left{
+  gap: 1rem;
+}
+.f-menu{
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .f-container{
+      justify-content: center;
+  }
+  .f-container>div{
+      align-items: center!important;
+      text-align: center;
+  }
+  .f-right{
+      justify-content: center;
+  }
+}
