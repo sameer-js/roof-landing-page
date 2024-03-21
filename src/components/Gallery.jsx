@@ -1,5 +1,9 @@
 const Gallery = () => {
-  return <div>Gallery</div>;
+  return (
+    <div className='g-wrapper'>
+      <div>G</div>
+    </div>
+  );
 };
 
 export default Gallery;
